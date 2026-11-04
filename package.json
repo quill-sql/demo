@@ -1,0 +1,37 @@
+{
+  "name": "quill-sample",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server/index.ts"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@quillsql/node": "^0.9.26",
+    "@quillsql/react": "^2.16.110",
+    "cors": "^2.8.5",
+    "date-fns-v2": "npm:date-fns@2.30.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-day-picker": "^10.0.2",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

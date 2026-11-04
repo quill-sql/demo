@@ -286,6 +286,22 @@ body {
   font-weight: 500;
 }
 
+/* StaticChart sizes its SVG to the wrapper, so charts need an explicit height. */
+.chart-frame--metric {
+  width: 100%;
+  height: 120px;
+}
+
+.chart-frame--chart {
+  width: 100%;
+  height: 320px;
+}
+
+.chart-frame--table {
+  width: 100%;
+  min-height: 280px;
+}
+
 @media (max-width: 719px) {
   .range-popup {
     flex-direction: column;

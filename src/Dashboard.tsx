@@ -13,9 +13,10 @@ export function Dashboard({ dashboardName }: { dashboardName: string }) {
       <div className="reports-grid">
         {Object.keys(sections).map((sectionName) => {
           const reports = sections[sectionName];
+          if (reports.length === 0) return null;
           return (
-            <div key={sectionName}>
-              <h2>{sectionName}</h2>
+            <section key={sectionName} className="report-section">
+              <div className="section-cards">
               {reports.map((report) => {
                 const isMetric = report.chartType === "metric";
                 const isTable = report.chartType === "table";
@@ -39,7 +40,8 @@ export function Dashboard({ dashboardName }: { dashboardName: string }) {
                   </div>
                 );
               })}
-            </div>
+              </div>
+            </section>
           );
         })}
       </div>
